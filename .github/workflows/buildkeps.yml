@@ -2,8 +2,12 @@ name: Build Keps
 
 on:
   push:
-    branches: 
-    - "main"
+  # schedule
+  schedule:
+  - cron: "0 1 * * *"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
