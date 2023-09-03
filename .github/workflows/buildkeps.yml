@@ -12,7 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      deployments: write
     steps:
     - uses: actions/checkout@v3
     
@@ -24,13 +26,8 @@ jobs:
       # uses: cloudflare/pages-action@752c4fc911d149221a4173136118c3cc250e9409
       uses: cloudflare/pages-action@v1.5.0
       with:
-        # Cloudflare API Token
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        # Cloudflare Account ID
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        # The name of the Pages project to upload to
         projectName: keps-ae5au-com
-        # The directory of static assets to upload
         directory: pub
-        # GitHub Token
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
