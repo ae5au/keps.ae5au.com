@@ -1,0 +1,32 @@
+name: Build Keps
+
+on:
+  push:
+    branches: 
+    - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build the keps
+      run: pwsh ./create-keps.ps1
+
+    - name: Cloudflare Pages GitHub Action
+      # You may pin to the exact commit or the version.
+      # uses: cloudflare/pages-action@752c4fc911d149221a4173136118c3cc250e9409
+      uses: cloudflare/pages-action@1.5.0
+      with:
+        # Cloudflare API Token
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        # Cloudflare Account ID
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        # The name of the Pages project to upload to
+        projectName: keps-ae5au-com
+        # The directory of static assets to upload
+        directory: pub
+        # GitHub Token
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
