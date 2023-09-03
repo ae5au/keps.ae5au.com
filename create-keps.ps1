@@ -19,7 +19,7 @@ foreach($Sat in $LinearSats)
 }
 $LinearKeps | Out-File pub/linear.txt
 
-$FMSats = "AO-91","ISS","PO-101","SO-50"
+$FMSats = "AO-91","ISS","PO-101","SO-50","Tevel-1","Tevel-2","Tevel-3","Tevel-4","Tevel-5","Tevel-6","Tevel-7","Tevel-8"
 $FMKeps = ""
 foreach($Sat in $FMSats)
 {
