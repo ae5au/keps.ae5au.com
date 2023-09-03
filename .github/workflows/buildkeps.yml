@@ -1,7 +1,6 @@
 name: Build Keps
 
 on:
-  push:
   # schedule
   schedule:
   - cron: "0 1 * * *"

@@ -1,3 +1,5 @@
+mkdir pub
+
 $NASAbare = Invoke-WebRequest -Uri "http://www.amsat.org/amsat/ftp/keps/current/nasabare.txt"
 if($NASAbare.StatusCode -ne 200)
 {
