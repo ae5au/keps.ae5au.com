@@ -33,7 +33,7 @@ foreach($Sat in $FMSats)
         Write-Warning "No match found for $Sat"
     }
 }
-$FMKeps = $FMKeps.replace("SO-50","SO-50 Testing with more data")
+$FMKeps = $FMKeps.replace("SO-50","SO-50 FM 145.850 436.795 67.0 2s 74.4")
 $FMKeps | Out-File pub/fm.txt
 
 $DigiSats = "IO-117","LEDSAT"
