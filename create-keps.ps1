@@ -7,7 +7,7 @@ if($NASAbare.StatusCode -ne 200)
     exit
 }
 
-$LinearSats = "RS-44","AO-07","FO-29","JO-97"
+$LinearSats = "RS-44","AO-07","FO-29","JO-97","XW-2B"
 $LinearKeps = ""
 foreach($Sat in $LinearSats)
 {
@@ -52,7 +52,7 @@ $FMKeps = $FMKeps.replace("LILACSAT-2","LilacSat-2 (CAS-3H) FM 144.350 437.200")
 
 $FMKeps | Out-File pub/fm.txt
 
-$DigiSats = "IO-117","LEDSAT"
+$DigiSats = "IO-117","LEDSAT","NO-44"
 $DigiKeps = ""
 foreach($Sat in $DigiSats)
 {
