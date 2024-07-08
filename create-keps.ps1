@@ -7,7 +7,7 @@ if($BareTLE.StatusCode -ne 200)
     exit
 }
 
-$LinearSats = "RS-44","AO-07","FO-29","JO-97","XW-2B"
+$LinearSats = "RS-44","AO-07","FO-29","JO-97","XW-2B","MESAT1"
 $LinearKeps = ""
 foreach($Sat in $LinearSats)
 {
