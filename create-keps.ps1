@@ -21,7 +21,7 @@ foreach($Sat in $LinearSats)
 }
 $LinearKeps | Out-File pub/linear.txt
 
-$FMSats = "AO-91","AO-92","ISS","PO-101","SO-50","Tevel-1","Tevel-2","Tevel-3","Tevel-4","Tevel-5","Tevel-6","Tevel-7","Tevel-8","UVSQ-SAT","INSPIRE-Sat 7","LILACSAT-2"
+$FMSats = "AO-91","AO-92","ISS","PO-101","SO-50","Tevel-2","Tevel-3","Tevel-4","Tevel-7","Tevel-8","UVSQ-SAT","INSPIRE-Sat 7","LILACSAT-2"
 $FMKeps = ""
 foreach($Sat in $FMSats)
 {
@@ -38,12 +38,9 @@ $FMKeps = $FMKeps.replace("AO-92","AO-92 FM 435.350 145.880 67.0")
 $FMKeps = $FMKeps.replace("ISS","ISS FM 145.990 437.800 67.0")
 $FMKeps = $FMKeps.replace("PO-101","PO-101 FM 437.500 145.900 141.3")
 $FMKeps = $FMKeps.replace("SO-50","SO-50 FM 145.850 436.795 67.0 2s 74.4")
-$FMKeps = $FMKeps.replace("Tevel-1","Tevel-1 FM 145.970 436.400")
 $FMKeps = $FMKeps.replace("Tevel-2","Tevel-2 FM 145.970 436.400")
 $FMKeps = $FMKeps.replace("Tevel-3","Tevel-3 FM 145.970 436.400")
 $FMKeps = $FMKeps.replace("Tevel-4","Tevel-4 FM 145.970 436.400")
-$FMKeps = $FMKeps.replace("Tevel-5","Tevel-5 FM 145.970 436.400")
-$FMKeps = $FMKeps.replace("Tevel-6","Tevel-6 FM 145.970 436.400")
 $FMKeps = $FMKeps.replace("Tevel-7","Tevel-7 FM 145.970 436.400")
 $FMKeps = $FMKeps.replace("Tevel-8","Tevel-8 FM 145.970 436.400")
 $FMKeps = $FMKeps.replace("UVSQ-SAT","UVSQ-SAT FM 145.905 437.020")
