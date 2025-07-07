@@ -63,6 +63,6 @@ foreach($Sat in $DigiSats)
         Write-Warning "No match found for $Sat"
     }
 }
-$DigiKeps = $DigiKeps.replace("SONATE-2","SONATE-2 APRS 145.825"
+$DigiKeps = $DigiKeps.replace("SONATE-2","SONATE-2 APRS 145.825")
 
 $DigiKeps | Out-File pub/digi.txt
